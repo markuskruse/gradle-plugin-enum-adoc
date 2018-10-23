@@ -1,0 +1,8 @@
+ext.deps=[:]
+def versions = [:]
+
+versions.project = '0.0.1-SNAPSHOT'
+versions.lombok = '1.18.2'
+versions.junit = '5.1.1'
+versions.mockito = '2.18.3'
+ext.versions = versions
