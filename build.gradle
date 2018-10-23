@@ -1,0 +1,34 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'com.gradle.plugin-publish' version '0.10.0'
+}
+
+sourceCompatibility = 10
+
+group = 'kruse.gradle.plugin.enumadoc'
+
+version = 0.1
+
+pluginBundle {
+    website = 'https://github.com/markuskruse/gradle-plugin-enum-adoc'
+    vcsUrl = 'https://github.com/markuskruse/gradle-plugin-enum-adoc'
+    tags = ['documenation', 'java', 'enum', 'asciidoc']
+
+    plugins {
+        enumadoc {
+            displayName = 'Enum asciidoc generator'
+        }
+    }
+}
+
+gradlePlugin {
+    plugins {
+        enumadoc {
+            id = 'kruse.enumadoc'
+            displayName = 'Enum asciidoc generator'
+            description = 'Generates an asciidoc formatted table based on a java Enum'
+            implementationClass = 'kruse.gradle.plugin.enumadoc.EnumAdocPlugin'
+        }
+    }
+}
+
